@@ -54,8 +54,26 @@ This web application is not mandatory in case you just want to use this lab for 
 
 Edit the YAML deployment file in order to specify the `NAMESPACE` of the `generator`. This web application can be deployed in another namespace for instance. But this web application needs to know where is the generator service.
 
+And as you can see, there is another variable to set (optional) - `DEVICE ID` tag. If you use `Google Tag Manager` to publish the DeviceID or recognize snippet, put here your Google TAG ID.
+
 ```
 vi .k8s/attributes/frontend-namespace-generator.yaml
+```
+
+```
+....
+    spec:
+      containers:
+      - name: frontend
+        image: registry.gitlab.com/sentence-application/frontend/frontend-ns-8080:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: NAMESPACE
+          value: m-dierick
+        - name: GOOGLETAGID
+          value: GTM-PC5HX2H
 ```
 
 ```
