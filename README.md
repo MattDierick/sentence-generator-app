@@ -31,7 +31,7 @@ Then, the frontend web application will `display` all the `words` in a `sentence
 
 In term of micro-services, this is how there are used by the Webapp frontend.
 
-  ![alt text](docs/images/webapp-containers.png)
+  ![alt text](docs/images/front-plus.png)
 
 
 > You can find the lab guide to deploy the app and the steps here: [Task1: Deploy the application](docs/task1/README.md)
