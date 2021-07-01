@@ -35,6 +35,8 @@ RUN a2enconf servername
 
 COPY generator.conf /etc/apache2/sites-available/
 RUN a2ensite generator.conf
+#extra line to run frontend in volterra vk8s
+RUN chown -R www-data:www-data /etc/apache2/sites-available/generator.conf
 
 RUN a2dissite 000-default
 
