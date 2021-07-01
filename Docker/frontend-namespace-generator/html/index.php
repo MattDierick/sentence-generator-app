@@ -119,7 +119,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				echo "<script>console.log(".json_encode($_POST).")</script>";
 				if (! empty($_POST["send"])) {
 					if (! empty($_POST["adjective"])) {
-						$word = filter_var($_POST["adjective"], FILTER_SANITIZE_STRING);
+						$word = $_POST["adjective"];
 						$postURL='http://adjectives.'.$NS.'/adjectives';
 						$payload = json_encode(array("name" => $word));
 					}
